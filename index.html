@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <section id="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="nav__list">
+                    <a class="logo" href="/">Dragon Ball</a>
+                    <ul class="nav__links">
+                        <li>
+                            <a class="nav__link nav__link--hover-effect" href="#">Browse</a>
+                        </li>
+                        <li>
+                            <a class="nav__link nav__link--hover-effect" href="#">Contact</a>
+                        </li>
+                        <li>
+                            <a class="nav__link nav__link--hover-effect" href="#">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="header">
+        <div class="container">
+            <div class="row">
+                <div class="anime__header">
+                    <h2 class="anime__header--title">All Episodes</h2>
+                    <select name="" id="filter" onchange="filterEpisodes(event)">
+                        <option value disabled selected>Filter</option>
+                        <option value="DBS">Dragon Ball Super</option>
+                        <option value="DBZ">Dragon Ball Z</option>
+                        <option value="DBGT">Dragon Ball GT</option>
+                        <option value="DB">Dragon Ball</option>
+                    </select>
+                </div>
+                <button class="return" onclick="resetEpisodes()">Return to All Episodes</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="episodes">
+        <div class="container">
+            <div class="row">
+                <div class="episodes">
+                    <div class="episode" onclick="notAvailable()">
+                        <figure class="episode__img--wrapper">
+                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
+                        </figure>
+                        <p class="episode__anime">Dragon Ball Super</p>
+                        <p class="episode__episode">Episode 12</p>
+                    </div>
+                    <div class="episode" onclick="notAvailable()">
+                        <figure class="episode__img--wrapper">
+                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
+                        </figure>
+                        <p class="episode__anime">Dragon Ball Super</p>
+                        <p class="episode__episode">Episode 12</p>
+                    </div>
+                    <div class="episode" onclick="notAvailable()">
+                        <figure class="episode__img--wrapper">
+                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
+                        </figure>
+                        <p class="episode__anime">Dragon Ball Super</p>
+                        <p class="episode__episode">Episode 12</p>
+                    </div>
+                    <div class="episode" onclick="notAvailable()">
+                        <figure class="episode__img--wrapper">
+                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
+                        </figure>
+                        <p class="episode__anime">Dragon Ball Super</p>
+                        <p class="episode__episode">Episode 12</p>
+                    </div>
+                    <div class="episode" onclick="notAvailable()">
+                        <figure class="episode__img--wrapper">
+                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
+                        </figure>
+                        <p class="episode__anime">Dragon Ball Super</p>
+                        <p class="episode__episode">Episode 12</p>
+                    </div>
+                    <div class="episode" onclick="notAvailable()">
+                        <figure class="episode__img--wrapper">
+                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
+                        </figure>
+                        <p class="episode__anime">Dragon Ball Super</p>
+                        <p class="episode__episode">Episode 12</p>
+                    </div>
+                    <div class="episode" onclick="notAvailable()">
+                        <figure class="episode__img--wrapper">
+                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
+                        </figure>
+                        <p class="episode__anime">Dragon Ball Super</p>
+                        <p class="episode__episode">Episode 12</p>
+                    </div>
+                    <div class="episode" onclick="notAvailable()">
+                        <figure class="episode__img--wrapper">
+                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
+                        </figure>
+                        <p class="episode__anime">Dragon Ball Super</p>
+                        <p class="episode__episode">Episode 12</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
