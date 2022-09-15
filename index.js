@@ -5,6 +5,14 @@ function notAvailable() {
   alert("Feature not available");
 }
 
+function openMenu() {
+  document.body.classList += " menu--open"
+}
+
+function closeMenu() {
+  document.body.classList.remove('menu--open')
+}
+
 // pass in filter parameter for when we decide to filter the episodes
 function renderEpisodes(filter) {
   // Accessing episodes div in HTML

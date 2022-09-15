@@ -29,6 +29,73 @@ a {
   margin: 0 auto;
 }
 
+/* MOBILE MENU */
+
+.btn__menu {
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  display: none;
+}
+
+.btn__menu:hover {
+  cursor: pointer;
+}
+
+.menu__backdrop {
+  position: absolute;
+  background-color: #181818;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu--open .menu__backdrop {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn__menu--close {
+  position: absolute;
+  right: 5.5vw;
+  top: 5vh;
+  padding: 24px;
+}
+
+.btn__menu--close:hover {
+  transform: scale(1.08);
+  transition: all 300ms ease;
+}
+
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__list {
+  padding: 16px 0;
+}
+
+.menu__link {
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu__link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 /* NAVIGATION */
 
 #navigation {
@@ -119,8 +186,8 @@ option {
 }
 
 .return--appear:hover {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* EPISODES */
@@ -165,4 +232,32 @@ option {
 .episode__episode,
 .episode__anime {
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav__list {
+    font-size: 20px;
+  }
+  .logo {
+    font-size: 32px;
+  }
+  .anime__header--title {
+    font-size: 24px;
+  }
+  select {
+    padding: 6px 12px;
+  }
+  .episode__anime,
+  .episode__episode {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 580px) {
+  .nav__link {
+    display: none;
+  }
+  .btn__menu {
+    display: block;
+  }
 }
