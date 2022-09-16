@@ -190,6 +190,12 @@ option {
   text-decoration: underline;
 }
 
+select#episode-filter {
+ display: flex;
+ justify-content: flex-end;
+ display: none;
+}
+
 /* EPISODES */
 
 .episodes {
@@ -259,5 +265,8 @@ option {
   }
   .btn__menu {
     display: block;
+  }
+  .episode {
+    width: 50%;
   }
 }
