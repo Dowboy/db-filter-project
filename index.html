@@ -58,11 +58,13 @@
                     </select>
                 </div>
                 <button class="return" onclick="resetEpisodes()">Return to All Episodes</button>
-                <select name="" id="episode-filter">
+                <div class="episode__filter--wrapper">
+                <select name="" id="episode-filter" onchange="episodeFilterSelect(event)">
                     <option value disabled selected>Filter Episodes</option>
                     <option value="HIGH_TO_LOW">Newest to Oldest</option>
                     <option value="LOW_TO_HIGH">Oldest to Newest</option>
                 </select>
+                </div>
             </div>
         </div>
     </section>
@@ -71,62 +73,6 @@
         <div class="container">
             <div class="row">
                 <div class="episodes">
-                    <div class="episode" onclick="notAvailable()">
-                        <figure class="episode__img--wrapper">
-                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
-                        </figure>
-                        <p class="episode__anime">Dragon Ball Super</p>
-                        <p class="episode__episode">Episode 12</p>
-                    </div>
-                    <div class="episode" onclick="notAvailable()">
-                        <figure class="episode__img--wrapper">
-                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
-                        </figure>
-                        <p class="episode__anime">Dragon Ball Super</p>
-                        <p class="episode__episode">Episode 12</p>
-                    </div>
-                    <div class="episode" onclick="notAvailable()">
-                        <figure class="episode__img--wrapper">
-                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
-                        </figure>
-                        <p class="episode__anime">Dragon Ball Super</p>
-                        <p class="episode__episode">Episode 12</p>
-                    </div>
-                    <div class="episode" onclick="notAvailable()">
-                        <figure class="episode__img--wrapper">
-                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
-                        </figure>
-                        <p class="episode__anime">Dragon Ball Super</p>
-                        <p class="episode__episode">Episode 12</p>
-                    </div>
-                    <div class="episode" onclick="notAvailable()">
-                        <figure class="episode__img--wrapper">
-                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
-                        </figure>
-                        <p class="episode__anime">Dragon Ball Super</p>
-                        <p class="episode__episode">Episode 12</p>
-                    </div>
-                    <div class="episode" onclick="notAvailable()">
-                        <figure class="episode__img--wrapper">
-                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
-                        </figure>
-                        <p class="episode__anime">Dragon Ball Super</p>
-                        <p class="episode__episode">Episode 12</p>
-                    </div>
-                    <div class="episode" onclick="notAvailable()">
-                        <figure class="episode__img--wrapper">
-                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
-                        </figure>
-                        <p class="episode__anime">Dragon Ball Super</p>
-                        <p class="episode__episode">Episode 12</p>
-                    </div>
-                    <div class="episode" onclick="notAvailable()">
-                        <figure class="episode__img--wrapper">
-                            <img class="episode__img" src="./assets/dbs.jpg" alt="">
-                        </figure>
-                        <p class="episode__anime">Dragon Ball Super</p>
-                        <p class="episode__episode">Episode 12</p>
-                    </div>
                 </div>
             </div>
         </div>

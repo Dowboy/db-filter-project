@@ -1,26 +1,28 @@
 const returnButton = document.querySelector(".return");
 const header = document.querySelector(".anime__header--title");
+const episodeFilter = document.querySelector(".episode__filter--wrapper");
+const filterSelect = document.querySelector("#filter")
+let filteredEpisodes;
 
 function notAvailable() {
   alert("Feature not available");
 }
 
 function openMenu() {
-  document.body.classList += " menu--open"
+  document.body.classList += " menu--open";
 }
 
 function closeMenu() {
-  document.body.classList.remove('menu--open')
+  document.body.classList.remove("menu--open");
 }
 
 // pass in filter parameter for when we decide to filter the episodes
-function renderEpisodes(filter) {
+function renderEpisodes(filter, episodeFilter) {
   // Accessing episodes div in HTML
   const episodesWrapper = document.querySelector(".episodes");
 
   // Storing array of objects inside "episodes" variable
   let episodes = getEpisodes();
-  let filteredEpisodes;
   console.log(episodes);
 
   if (filter === "DBZ") {
@@ -49,6 +51,11 @@ function renderEpisodes(filter) {
     header.innerHTML = "Dragon Ball";
   }
 
+  // Sorting episodes from selected anime (using second parameter of this function)
+  if (episodeFilter) {
+    episodes = episodeFilter;
+  }
+
   // Dynamic Outputting Data from stored variable
   const episodesHTML = episodes
     .map((episode) => {
@@ -69,13 +76,28 @@ function renderEpisodes(filter) {
 
 function resetEpisodes() {
   renderEpisodes();
-  returnButton.classList.remove("return--appear");
   header.innerHTML = "All Episodes";
+  returnButton.classList.remove("return--appear");
+  episodeFilter.classList.remove('episode__filter--wrapper-visible')
+  // resets filter select
+  filterSelect.selectedIndex = 0;
+}
+
+// sorting episodes function that is passed in as a parameter to renderEpisodes() function
+function episodeFilterSelect(event) {
+  if (event.target.value === "HIGH_TO_LOW") {
+    filteredEpisodes.sort((a, b) => b.episode - a.episode);
+  }
+  else if (event.target.value === "LOW_TO_HIGH") {
+    filteredEpisodes.sort((a, b) => a.episode - b.episode);
+  }
+  renderEpisodes(undefined, filteredEpisodes)
 }
 
 function filterEpisodes(event) {
   // running renderEpisodes function with parameter to filter
   renderEpisodes(event.target.value);
+  episodeFilter.classList += " episode__filter--wrapper-visible";
   setTimeout(() => {
     returnButton.classList.add("return--appear");
   }, 1000);

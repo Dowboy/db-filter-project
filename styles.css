@@ -190,10 +190,14 @@ option {
   text-decoration: underline;
 }
 
-select#episode-filter {
- display: flex;
- justify-content: flex-end;
- display: none;
+.episode__filter--wrapper {
+  padding: 0 24px;
+  display: none;
+}
+
+.episode__filter--wrapper-visible {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /* EPISODES */
@@ -268,5 +272,8 @@ select#episode-filter {
   }
   .episode {
     width: 50%;
+  }
+  select {
+    max-width: 150px;
   }
 }
