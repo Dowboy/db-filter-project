@@ -1,7 +1,8 @@
 const returnButton = document.querySelector(".return");
 const header = document.querySelector(".anime__header--title");
 const episodeFilter = document.querySelector(".episode__filter--wrapper");
-const filterSelect = document.querySelector("#filter")
+const filterSelect = document.querySelector("#filter");
+const episodeFilterSelector = document.querySelector("#episode-filter");
 let filteredEpisodes;
 
 function notAvailable() {
@@ -78,7 +79,7 @@ function resetEpisodes() {
   renderEpisodes();
   header.innerHTML = "All Episodes";
   returnButton.classList.remove("return--appear");
-  episodeFilter.classList.remove('episode__filter--wrapper-visible')
+  episodeFilter.classList.remove("episode__filter--wrapper-visible");
   // resets filter select
   filterSelect.selectedIndex = 0;
 }
@@ -87,16 +88,17 @@ function resetEpisodes() {
 function episodeFilterSelect(event) {
   if (event.target.value === "HIGH_TO_LOW") {
     filteredEpisodes.sort((a, b) => b.episode - a.episode);
-  }
-  else if (event.target.value === "LOW_TO_HIGH") {
+  } else if (event.target.value === "LOW_TO_HIGH") {
     filteredEpisodes.sort((a, b) => a.episode - b.episode);
   }
-  renderEpisodes(undefined, filteredEpisodes)
+  renderEpisodes(undefined, filteredEpisodes);
 }
 
 function filterEpisodes(event) {
   // running renderEpisodes function with parameter to filter
   renderEpisodes(event.target.value);
+  // reset episode filter option
+  episodeFilterSelector.selectedIndex = 0;
   episodeFilter.classList += " episode__filter--wrapper-visible";
   setTimeout(() => {
     returnButton.classList.add("return--appear");
