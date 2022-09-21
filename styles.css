@@ -214,7 +214,7 @@ option {
 
 .episode__img--wrapper:hover .episode__img {
   transform: scale(1.03);
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .episode__img--wrapper {
