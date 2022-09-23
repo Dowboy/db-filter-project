@@ -50,6 +50,12 @@ function renderEpisodes(filter, episodeFilter) {
     );
     episodes = filteredEpisodes;
     header.innerHTML = "Dragon Ball";
+  } else if (filter === "DBH") {
+    filteredEpisodes = episodes.filter(
+      (episode) => episode.anime === "Dragon Ball Heroes"
+    );
+    episodes = filteredEpisodes;
+    header.innerHTML = "Dragon Ball Heroes";
   }
 
   // Sorting episodes from selected anime (using second parameter of this function)
@@ -400,6 +406,78 @@ function getEpisodes() {
       episode: 12,
       anime: "Dragon Ball",
       url: "assets/db.jpg",
+    },
+    {
+      id: 49,
+      episode: 1,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 50,
+      episode: 2,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 51,
+      episode: 3,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 52,
+      episode: 4,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 53,
+      episode: 5,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 54,
+      episode: 6,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 55,
+      episode: 7,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 56,
+      episode: 8,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 57,
+      episode: 9,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 58,
+      episode: 10,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 59,
+      episode: 11,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
+    },
+    {
+      id: 60,
+      episode: 12,
+      anime: "Dragon Ball Heroes",
+      url: "assets/dbh.jpg",
     },
   ];
 }
